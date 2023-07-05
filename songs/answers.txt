@@ -1,0 +1,18 @@
+The person has listen to a good number of songs with danceability above 0.75
+Which can indicate that the person like songs which are danceable.
+
+The list of songs that the person listened to that have danceability, energy and valence greater than 0.75 is 5 songs.
+Which indicates that the person listen to songs with a combination of danceability, energy and valence less than 0.75
+
+The average energy of all songs which is 0.65906
+
+Based on the average energy and the results of previous queries, the person most likely enjoys songs which are danceable and have energy rating between 0.7 and 0.6
+
+
+
+This Hypothesize might not be accurate to the person as the data could be from songs with drastically different ratings for danceability, energy and valence.
+Thus the average will be be affected and the result will not reflect the taste of the listener.
+
+
+A better solution would be to take into account other fields like loudness, speechiness and tempo to get a etter grasp on the type of songs the listener prefers.
+By taking all this into account, a weighted average could be calculated for each criteria (most recent songs will have the highest weight).

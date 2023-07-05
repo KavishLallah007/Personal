@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#responce1').innerHTML = 'Correct';
+                });
+
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#responce1').innerHTML = 'Incorrect';
+                    });
+                }
+
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'Konoha') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#responce2').innerHTML = 'Correct'
+                    }
+                    else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#responce2').innerHTML = 'Incorrect'
+                    }
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the name of Naruto Uzumaki's father?</h3>
+                <button class="incorrect">Kakashi</button>
+                <button class="incorrect">Jiraya</button>
+                <button class="correct">Minato</button>
+                <button class="incorrect">Sarutobi</button>
+
+                <p id="responce1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>What is the name of the village where Naruto Uzumaki lives?</h3>
+                <input type="text"></input>
+                <button id="check">Submit</button>
+
+                <p id="responce2"></p>
+            </div>
+        </div>
+    </body>
+</html>

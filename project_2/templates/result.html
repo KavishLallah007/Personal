@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Calender
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <h2>Query Result:</h2>
+        <table class="table table-striped">
+            {% for creator in creator %}
+                <tr>
+                    <th>Event Creator</th>
+                    <td>{{ creator.fname }} {{ creator.lname }}</td>
+                </tr>
+            {% endfor %}
+            {% for result in result %}
+                <tr>
+                    <th>Event name</th>
+                    <td>{{ result.name }}</td>
+                </tr>
+                <tr>
+                    <th>Event date</th>
+                    <td>{{ result.date }}</td>
+                </tr>
+                <tr>
+                    <th>start time</th>
+                    <td>{{ result.start_time }}</td>
+                </tr>
+                <tr>
+                    <th>End time</th>
+                    <td>{{ result.end_time }}</td>
+                </tr>
+                <tr>
+                    <th>Who can attend</th>
+                    <td>{{ result.event_grade }}</td>
+                </tr>
+                <tr>
+                    <th>Event type</th>
+                    <td>{{ result.event_type }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

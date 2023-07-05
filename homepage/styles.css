@@ -1,0 +1,195 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: absolute;
+    width: 100%;
+}
+
+header{
+    padding: 15px;
+    text-align: center;
+    height: 10vh;
+    float: top;
+    background-color: black;
+}
+
+#home{
+    text-align: center;
+    background-color: orange;
+    height: 100vh;
+    padding: 10%;
+}
+.home-image{
+    padding: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.color {
+    background-color: orange;
+    height: 100vh;
+}
+
+#history{
+    padding-top: 8%;
+    height: 80vh;
+    width: 100%;
+    gap: 50px;
+}
+
+#photo {
+    padding-top: 5%;
+    background-color: orange;
+}
+
+.gallery {
+    padding: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #f2f2f2;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+}
+
+.v-stretch {
+    grid-row: span 2;
+}
+
+.h-stretch {
+    grid-column: span 2;
+}
+
+.big-stretch {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+
+.gallery div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 560px) {
+    .v-stretch {
+        grid-row: span 1;
+    }
+
+    .h-stretch {
+        grid-column: span 1;
+    }
+    .big-stretch {
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+}
+
+.background-img {
+    background-image: url("/images/dojo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+#register {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    position: absolute;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .signin {
+    position: absolute;
+    width: 400px;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+    background-color: orange;
+}
+
+section .signin .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+section .signin .content h2 {
+    font-size: 2em;
+    color: #000;
+    text-transform: uppercase;
+}
+
+section .signin .content .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+section .signin .content .form .inputBx {
+    position: relative;
+    width: 100%;
+}
+
+section .signin .content .form .inputBx input {
+    position: relative;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1em;
+}
+
+section .signin .content .form .inputBx i {
+    position absolute;
+    left: 0;
+    padding: 15px 10px;
+    font-style: normal;
+    color: #000;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.signin .content .form .inputBx input :focus ~i,
+.signin .content .form .inputBx input :valid ~i {
+    transform: translateY(-7.5px);
+    font-size: 0.8em;
+    color: #fff;
+}
+
+.signin .content .form .inputBx input[type="submit"] {
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.25em;
+    letter-spacing: 0.05em;
+}

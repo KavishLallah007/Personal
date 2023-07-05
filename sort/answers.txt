@@ -1,0 +1,22 @@
+sort1 uses: Bubble sort
+
+How do you know?: There is a distinct difference in time taken to sort random50000 and sorted50000.
+
+random50000.txt: 0m7.695s
+sorted50000.txt: 0m1.017s
+
+
+sort2 uses: Merge sort
+
+How do you know?: Sort 2 took the least amount of time to sort random50000 and sorted50000.
+
+random50000.txt: 0m0.951s
+sorted50000.txt: 0m0.916s
+
+
+sort3 uses: Selection sort
+
+How do you know?: This sort took approximately the same amount of time to sort random50000 and sorted50000.
+
+random50000.txt: 0m3.622s
+sorted50000.txt: 0m3.301s

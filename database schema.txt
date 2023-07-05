@@ -1,0 +1,49 @@
+cs50 final project database schema
+
+
+CREATE TABLE users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    fname TEXT NOT NULL,
+    lname TEXT NOT NULL,
+	username TEXT NOT NULL,
+	password TEXT NOT NULL,
+	position TEXT NOT NULL
+);
+
+CREATE TABLE events (
+    event_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    user_id INTEGER NOT NULL,
+	name TEXT NOT NULL,
+	date DATE NOT NULL,
+	start_time TIME NOT NULL,
+	end_time TIME NOT NULL,
+	event_grade TEXT NOT NULL,
+	event_type TEXT NOT NULL,
+	FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+
+CREATE TABLE queries (
+  query_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  event_id INTEGER NOT NULL,
+  name TEXT NOT NULL,
+  email TEXT NOT NULL,
+  message TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  FOREIGN KEY (event_id) REFERENCES events(event_id)
+);
+
+
+
+INSERT INTO students (fname, lname, username, password, grade) VALUES ('Fannie', 'Terrell', '1234', 'fannie.terrell', '5');
+INSERT INTO students (fname, lname, username, password, grade) VALUES ('Anamarija', 'Petit', '1234', 'anamarija.petit', '5');
+INSERT INTO students (fname, lname, username, password, grade) VALUES ('Maia', 'Ruiz', '1234', 'maia.ruiz', '5');
+INSERT INTO students (fname, lname, username, password, grade) VALUES ('Giltbert', 'Carmona', '1234', 'giltbert.carmona', '5');
+INSERT INTO students (fname, lname, username, password, grade) VALUES ('Vincent', 'Poirot', '1234', 'vincent.poirot', '5');
+INSERT INTO teachers (fname, lname, username, password, position) VALUES ('John', 'Smith', '5678', 'john.smith', 'teacher');
+INSERT INTO class (grade, subject) VALUES ('5', 'Mathematics');
+INSERT INTO teach_class (stud_id, teach_id, class_id) VALUES (1, 1, 1);
+INSERT INTO teach_class (stud_id, teach_id, class_id) VALUES (2, 1, 1);
+INSERT INTO teach_class (stud_id, teach_id, class_id) VALUES (3, 1, 1);
+INSERT INTO teach_class (stud_id, teach_id, class_id) VALUES (4, 1, 1);
+INSERT INTO teach_class (stud_id, teach_id, class_id) VALUES (5, 1, 1);
+
